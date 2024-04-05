@@ -73,7 +73,7 @@ public:
         return d1;
     }
 
-}; // Fim da classe
+}; 
 
 class Contato {
 private:
@@ -118,7 +118,7 @@ public:
     }
 
     int idade() {
-        Data hoje(1, 1, 2024); // Utiliza 2024 para cálculo da idade
+        Data hoje(1, 1, 2024); 
         int idade = hoje.getAno() - this->dtnasc.getAno();
         if (hoje.getMes() < this->dtnasc.getMes() ||
             (hoje.getMes() == this->dtnasc.getMes() && hoje.getDia() < this->dtnasc.getDia())) {
@@ -126,7 +126,7 @@ public:
         }
         return idade;
     }
-}; // Fim da classe Contato
+}; 
 
 int main() {
     Contato contatos[5];
@@ -135,7 +135,7 @@ int main() {
     for (int i = 0; i < 5; i++) {
         cout << "Digite o nome do contato " << i + 1 << ": ";
         string nome;
-        getline(cin >> ws, nome); // Para permitir a entrada de espaços
+        getline(cin >> ws, nome); 
         contatos[i].setNome(nome);
 
         cout << "Digite o e-mail do contato " << i + 1 << ": ";
@@ -159,7 +159,7 @@ int main() {
         cout << endl;
     }
 
-    // Exibir os contatos cadastrados
+    
     cout << "Contatos cadastrados:" << endl;
     for (int i = 0; i < 5; i++) {
         cout << "Contato " << i + 1 << ":" << endl;
